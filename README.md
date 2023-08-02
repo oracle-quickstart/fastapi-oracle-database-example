@@ -46,14 +46,14 @@ This is an example Python FastAPI application that interacts with Oracle Databas
 To run the FastAPI app, use the following command:
 
 ```
-uvicorn fapi:app --host 127.0.0.1 --port 8000 --reload
+uvicorn fapi:app --reload
 ```
 
 If the uvicorn binary is not in your PATH, you may need to specify the full
 path, for example:
 
 ```
-$HOME/Library/Python/3.9/bin/uvicorn fapi:app --host 127.0.0.1 --port 8000 --reload
+$HOME/Library/Python/3.9/bin/uvicorn fapi:app --reload
 ```
 
 Enter your database user password when prompted.
