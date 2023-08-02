@@ -61,7 +61,6 @@ with pool.acquire() as connection:
                                    product_name VARCHAR2(100) NOT NULL,
                                    quantity NUMBER NOT NULL)';
 
-              COMMIT;
             END;""")
 
 # Endpoint to create an order
