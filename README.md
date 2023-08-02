@@ -36,7 +36,7 @@ This is an example FastAPI application that interacts with an Oracle database.
 To run the FastAPI app, use the following command:
 
 ```
-uvicorn main:app --host 127.0.0.1 --port 8000
+uvicorn fapi:app --host 127.0.0.1 --port 8000
 ```
 
 The app will be accessible at http://localhost:8000 or http://YOUR_LOCAL_IP:8000
