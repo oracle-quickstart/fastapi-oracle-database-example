@@ -1,11 +1,12 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import oracledb
+import logging
 
 # Replace these with your Oracle database connection details
-DB_USER = ''
-DB_PASSWORD = ''
-DB_DSN = '' #eg: (description= (retry_count=15)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=adb.ap-sydney-1.oraclecloud.com))(connect_data=(service_name=gxxx_yxxxxx_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+DB_USER = 'admin'
+DB_PASSWORD = '*****'
+DB_DSN = ''
 
 # Pydantic model for order data
 class Order(BaseModel):
@@ -56,6 +57,33 @@ def get_order(order_id: int):
     except oracledb.Error as e:
         raise HTTPException(status_code=500, detail=f"Database error: {e}")
 
+# Endpoint to delete an order by ID
+@app.delete("/orders/{order_id}")
+def delete_order(order_id: int):
+    try:
+        cursor.execute("DELETE FROM orders WHERE order_id = :1", (order_id,))
+        conn.commit()
+        return {"message": "Order deleted successfully"}
+    except oracledb.Error as e:
+        logging.error(f"Database error while deleting order: {e}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+# Endpoint to update an order by ID
+@app.put("/orders/{order_id}", response_model=Order)
+def update_order(order_id: int, updated_order: Order):
+    try:
+        # Update the order in the database
+        cursor.execute(
+            "UPDATE orders SET product_name = :1, quantity = :2 WHERE order_id = :3",
+            (updated_order.product_name, updated_order.quantity, order_id),
+        )
+        conn.commit()
+        return updated_order
+    except oracledb.Error as e:
+        raise HTTPException(status_code=500, detail=f"Database error: {e}")
+
+
 # Close the database connection on app shutdown
 @app.on_event("shutdown")
 def shutdown_event():
@@ -67,4 +95,3 @@ if __name__ == "__main__":
     import uvicorn
 
     uvicorn.run(app, host="127.0.0.1", port=8000)
-
