@@ -12,7 +12,7 @@ This is an example FastAPI application that interacts with an Oracle database.
 1. Clone this repository:
    ```
    git clone https://github.com/oracle-quickstart/fastapi-oracle-database-example.git
-   cd fastapi-oracle-example
+   cd fastapi-oracle-database-example
    ```
 
 2. Install the required packages using pip:
