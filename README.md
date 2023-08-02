@@ -1,14 +1,15 @@
 # FastAPI Oracle Database Example
 
-This is an example FastAPI application that interacts with an Oracle database.
+This is an example Python FastAPI application that interacts with Oracle Database.
 
 ![FastAPI OracleDB](https://github.com/oracle-quickstart/fastapi-oracle-database-example/assets/39692236/8964ebc2-b854-403b-95d2-56c488f848c3)
 
 
 ## Prerequisites
 
-- Python 3.11+
-- Oracle database connection details
+- Python 3
+- Oracle Database connection details
+- curl (optional)
 
 ##### Create Table in Oracle Database
 
@@ -23,6 +24,7 @@ CREATE TABLE orders (
 ## Installation
 
 ##### 1. Clone this repository:
+
    ```
    git clone https://github.com/oracle-quickstart/fastapi-oracle-database-example.git
    cd fastapi-oracle-database-example
@@ -30,26 +32,23 @@ CREATE TABLE orders (
 
 ##### 2. Install the required packages using pip:
 
-   ``` 
-   pip3 install -r requirements.txt
+   ```
+   python3 -m pip install -r requirements.txt
    ```
 
 ##### 3. Configuration
 
-    Open fapi.py and replace the following placeholders with your Oracle database connection details:
+   Set database username and connection string environment variables:
 
-   ```
-        DB_USER
-        DB_PASSWORD
-        DB_DSN
-   ```
+   PYTHON_USERNAME
+
+   PYTHON_CONNECTSTRING
 
 ###### Example:
 
-  ```
-DB_USER = 'admin'
-DB_PASSWORD = 'YourP@ssw0rd82762A'
-DB_DSN = '(description= (retry_count=15)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=adb.ap-sydney-1.oraclecloud.com))(connect_data=(service_name=gxxx_xxx_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))'
+   ```
+   export PYTHON_USERNAME=cj
+   export PYTHON_CONNECTSTRING=localhost/orclpdb1
    ```
 
 ##### 4. Running the FastAPI App
@@ -57,27 +56,37 @@ DB_DSN = '(description= (retry_count=15)(retry_delay=3)(address=(protocol=tcps)(
 To run the FastAPI app, use the following command:
 
 ```
-uvicorn fapi:app --host 127.0.0.1 --port 8000
+uvicorn fapi:app --host 127.0.0.1 --port 8000 --reload
 ```
+
+If the uvicorn binary is not in your PATH, you may need to specify the full
+path, for example:
+
+```
+$HOME/Library/Python/3.9/bin/uvicorn fapi:app --host 127.0.0.1 --port 8000 --reload
+```
+
+Enter your database user password when prompted.
 
 The app will be accessible at http://localhost:8000 or http://YOUR_LOCAL_IP:8000
 
 ##### 5. API Endpoints
 
-<img width="995" alt="Screen Shot 2023-08-02 at 6 18 06 pm" src="https://github.com/oracle-quickstart/fastapi-oracle-database-example/assets/39692236/20351ceb-4c48-4418-96a4-80531111260b">
+Endpoints are shown at http://localhost:8000/docs
 
+They are:
+- `POST`: to create data
+- `GET`: to read data
+- `PUT`: to update data
+- `DELETE`: to delete data
 
-```POST```: to create data
+Alternative documentation is at http://localhost:8000/redoc
 
-```GET```: to read data
-
-```PUT```: to update data
-
-```DELETE```: to delete data
-
+To use the FastAPI app, you can use the 'Try it out' buttons on
+http://localhost:8000/docs or alternatively use a command line tool such as
+`curl`.
 
 ###### Create an order:
-
 
 ```
 curl -X 'POST' \
@@ -120,5 +129,3 @@ curl -X 'DELETE' \
   'http://localhost:8000/orders/1' \
   -H 'accept: application/json'
 ```
-
-
