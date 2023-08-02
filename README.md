@@ -44,6 +44,14 @@ CREATE TABLE orders (
         DB_DSN
    ```
 
+###### Example:
+
+  ```
+DB_USER = 'admin'
+DB_PASSWORD = 'YourP@ssw0rd82762A'
+DB_DSN = '(description= (retry_count=15)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=adb.ap-sydney-1.oraclecloud.com))(connect_data=(service_name=gxxx_xxx_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))'
+   ```
+
 ##### 4. Running the FastAPI App
 
 To run the FastAPI app, use the following command:
