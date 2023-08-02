@@ -2,6 +2,9 @@
 
 This is an example FastAPI application that interacts with an Oracle database.
 
+![FastAPI OracleDB](https://github.com/oracle-quickstart/fastapi-oracle-database-example/assets/39692236/8964ebc2-b854-403b-95d2-56c488f848c3)
+
+
 ## Prerequisites
 
 - Python 3.11+
