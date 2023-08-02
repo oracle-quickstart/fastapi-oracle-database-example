@@ -68,6 +68,12 @@ The app will be accessible at http://localhost:8000 or http://YOUR_LOCAL_IP:8000
 
 ###### Create an order:
 
+POST: to create data.
+GET: to read data.
+PUT: to update data.
+DELETE: to delete data.
+
+
 ```
 curl -X 'POST' \
   'http://localhost:8000/orders/' \
