@@ -64,6 +64,8 @@ The app will be accessible at http://localhost:8000 or http://YOUR_LOCAL_IP:8000
 
 ##### 5. API Endpoints
 
+<img width="995" alt="Screen Shot 2023-08-02 at 6 18 06 pm" src="https://github.com/oracle-quickstart/fastapi-oracle-database-example/assets/39692236/20351ceb-4c48-4418-96a4-80531111260b">
+
 ###### Create an order:
 
 ```
@@ -108,4 +110,4 @@ curl -X 'DELETE' \
   -H 'accept: application/json'
 ```
 
-<img width="995" alt="Screen Shot 2023-08-02 at 6 18 06 pm" src="https://github.com/oracle-quickstart/fastapi-oracle-database-example/assets/39692236/20351ceb-4c48-4418-96a4-80531111260b">
+
