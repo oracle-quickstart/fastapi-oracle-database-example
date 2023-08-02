@@ -1,0 +1,6 @@
+fastapi
+oracledb
+uvicorn
+pydantic
+passlib
+jose
