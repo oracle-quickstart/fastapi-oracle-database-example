@@ -11,16 +11,6 @@ This is an example Python FastAPI application that interacts with Oracle Databas
 - Oracle Database connection details
 - curl (optional)
 
-##### Create Table in Oracle Database
-
-```
-CREATE TABLE orders (
-  order_id NUMBER PRIMARY KEY,
-  product_name VARCHAR2(100) NOT NULL,
-  quantity NUMBER NOT NULL
-);
-```
-
 ## Installation
 
 ##### 1. Clone this repository:
