@@ -3,9 +3,9 @@ from pydantic import BaseModel
 import oracledb
 
 # Replace these with your Oracle database connection details
-DB_USER = 'admin'
-DB_PASSWORD = '******'
-DB_DSN = '(description= (retry_count=15)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=adb.ap-sydney-1.oraclecloud.com))(connect_data=(service_name=g9b8049aad9c64c_y16fuv7vqq9428l5_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))'
+DB_USER = ''
+DB_PASSWORD = ''
+DB_DSN = '' #eg: (description= (retry_count=15)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=adb.ap-sydney-1.oraclecloud.com))(connect_data=(service_name=gxxx_yxxxxx_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
 
 # Pydantic model for order data
 class Order(BaseModel):
