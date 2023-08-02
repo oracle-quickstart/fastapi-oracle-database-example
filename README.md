@@ -65,8 +65,22 @@ curl -X 'POST' \
   -H 'Content-Type: application/json' \
   -d '{
     "order_id": 1,
-    "product_name": "Example Product",
+    "product_name": "New Product",
     "quantity": 10
+  }'
+```
+
+###### Update an order:
+
+```
+curl -X 'PUT' \
+  'http://localhost:8000/orders/1' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "order_id": 1,
+    "product_name": "Updated Product",
+    "quantity": 20
   }'
 ```
 
@@ -74,6 +88,14 @@ curl -X 'POST' \
 
 ```
 curl -X 'GET' \
+  'http://localhost:8000/orders/1' \
+  -H 'accept: application/json'
+```
+
+###### Delete an order:
+
+```
+curl -X 'DELETE' \
   'http://localhost:8000/orders/1' \
   -H 'accept: application/json'
 ```
