@@ -7,7 +7,7 @@ This is an example FastAPI application that interacts with an Oracle database.
 - Python 3.11+
 - Oracle database connection details
 
-## Create Table in Oracle Database
+##### Create Table in Oracle Database
 
 ```
 CREATE TABLE orders (
@@ -19,19 +19,19 @@ CREATE TABLE orders (
 
 ## Installation
 
-1. Clone this repository:
+##### 1. Clone this repository:
    ```
    git clone https://github.com/oracle-quickstart/fastapi-oracle-database-example.git
    cd fastapi-oracle-database-example
    ```
 
-2. Install the required packages using pip:
+##### 2. Install the required packages using pip:
 
    ``` 
    pip3 install -r requirements.txt
    ```
 
-3. Configuration
+##### 3. Configuration
 
     Open fapi.py and replace the following placeholders with your Oracle database connection details:
 
@@ -41,7 +41,7 @@ CREATE TABLE orders (
         DB_DSN
    ```
 
-4. Running the FastAPI App
+##### 4. Running the FastAPI App
 
 To run the FastAPI app, use the following command:
 
@@ -51,9 +51,9 @@ uvicorn fapi:app --host 127.0.0.1 --port 8000
 
 The app will be accessible at http://localhost:8000 or http://YOUR_LOCAL_IP:8000
 
-5. API Endpoints
+##### 5. API Endpoints
 
-Create an order:
+###### Create an order:
 
 ```
 curl -X 'POST' \
@@ -67,7 +67,7 @@ curl -X 'POST' \
   }'
 ```
 
-Retrieve an order by ID:
+###### Retrieve an order by ID:
 
 ```
 curl -X 'GET' \
