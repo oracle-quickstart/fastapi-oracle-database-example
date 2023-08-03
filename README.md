@@ -119,3 +119,12 @@ curl -X 'DELETE' \
   'http://localhost:8000/orders/1' \
   -H 'accept: application/json'
 ```
+
+##### 6. Docs
+
+With FastAPI you get OpenAPI docs generated automatically if you go to path ```/docs``` 
+
+```http://127.0.0.1:8000/docs```
+
+<img width="1477" alt="Screen Shot 2023-08-03 at 10 40 58 am" src="https://github.com/oracle-quickstart/fastapi-oracle-database-example/assets/39692236/3b853031-793a-4237-80c8-54a72c6f194f">
+
