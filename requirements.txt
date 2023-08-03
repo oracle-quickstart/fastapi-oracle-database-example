@@ -1,6 +1,4 @@
-fastapi
+fastapi[all]
 oracledb
 uvicorn
 pydantic
-passlib
-jose
