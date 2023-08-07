@@ -34,12 +34,19 @@ This is an example Python FastAPI application that interacts with Oracle Databas
 
    PYTHON_CONNECTSTRING
 
-###### Example:
-
+##### Example:
+###### Local Oracle DB
    ```
    export PYTHON_USERNAME=cj
    export PYTHON_CONNECTSTRING=localhost/orclpdb1
    ```
+
+###### Autonomous Oracle DB
+
+  ```
+   export PYTHON_USERNAME=admin
+   export PYTHON_CONNECTSTRING='(description= (retry_count=15)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=adb.ap-sydney-1.oraclecloud.com))(connect_data=(service_name=gxxxxxx_yxxxx_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))'
+  ```
 
 ##### 4. Running the FastAPI App
 
@@ -127,4 +134,10 @@ With FastAPI you get OpenAPI docs generated automatically if you go to path ```/
 ```http://127.0.0.1:8000/docs```
 
 <img width="1477" alt="Screen Shot 2023-08-03 at 10 40 58 am" src="https://github.com/oracle-quickstart/fastapi-oracle-database-example/assets/39692236/3b853031-793a-4237-80c8-54a72c6f194f">
+
+
+
+```http://127.0.0.1:8000/redoc```
+
+<img width="1493" alt="Screen Shot 2023-08-07 at 10 36 34 am" src="https://github.com/oracle-quickstart/fastapi-oracle-database-example/assets/39692236/908c3794-206b-4e41-a296-37627128f148">
 
