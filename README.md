@@ -1,6 +1,6 @@
 # FastAPI Oracle Database Example
 
-This is an example Python FastAPI application that interacts with Oracle Database.
+This is an example of a Python FastAPI Web Service that interacts with Oracle Database.
 
 ![FastAPI OracleDB](https://github.com/oracle-quickstart/fastapi-oracle-database-example/assets/39692236/8964ebc2-b854-403b-95d2-56c488f848c3)
 
@@ -140,4 +140,12 @@ With FastAPI you get OpenAPI docs generated automatically if you go to path ```/
 ```http://127.0.0.1:8000/redoc```
 
 <img width="1493" alt="Screen Shot 2023-08-07 at 10 36 34 am" src="https://github.com/oracle-quickstart/fastapi-oracle-database-example/assets/39692236/908c3794-206b-4e41-a296-37627128f148">
+
+## More on REST APIs for Oracle
+
+Oracle Database also provides native REST APIs capabilities. To learn more, see :
+
+Product Page : https://www.oracle.com/database/technologies/appdev/rest.html
+
+Hands-on LiveLab : https://www.oracle.com/database/technologies/appdev/rest.html
 
