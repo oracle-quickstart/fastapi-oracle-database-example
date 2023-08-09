@@ -147,5 +147,4 @@ Oracle Database also provides native REST APIs capabilities. To learn more, see 
 
 Product Page : https://www.oracle.com/database/technologies/appdev/rest.html
 
-Hands-on LiveLab : https://www.oracle.com/database/technologies/appdev/rest.html
-
+Hands-on LiveLab : https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=815
