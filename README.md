@@ -148,3 +148,18 @@ Oracle Database also provides native REST APIs capabilities. To learn more, see 
 Product Page : https://www.oracle.com/database/technologies/appdev/rest.html
 
 Hands-on LiveLab : https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=815
+
+## Contributing
+
+This project welcomes contributions from the community. Before submitting a pull request, please [review our contribution guide](./CONTRIBUTING.md)
+
+## Security
+
+Please consult the [security guide](./SECURITY.md) for our responsible security vulnerability disclosure process
+
+## License
+
+Copyright (c) 2023 Oracle and/or its affiliates.
+
+Released under the Apache License version 2.0 as shown at
+<http://www.apache.org/licenses/>.
